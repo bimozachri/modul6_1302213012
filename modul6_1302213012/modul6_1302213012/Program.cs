@@ -50,6 +50,8 @@ namespace modul6_1302213012
             video10.IncreasePlayCount(2);
             video10.PrintVideoDetails();
 
+            Console.WriteLine(" ");
+
             user.AddVideo(video1);
             user.AddVideo(video2);
             user.AddVideo(video3);
@@ -62,8 +64,24 @@ namespace modul6_1302213012
             user.AddVideo(video10);
 
             user.PrintAllVideoCount();
+
+            Console.WriteLine("Video ditonton 25.000.000");
+            video1.IncreasePlayCount(25000000);
+            Console.WriteLine("Video ditonton 25.000.000 bisa jika 25.000.001 tidak bisa");
+            Console.WriteLine();
+
+            Console.WriteLine("Video ditonton limit int");
+            for (int i = 0; i < 84; i++)
+            {
+                video1.IncreasePlayCount(25000000);
+            }
+            video1.PrintVideoDetails();
+            Console.WriteLine();
+            video1.IncreasePlayCount(25000000);
+            Console.WriteLine();
+
+            user.PrintAllVideoCount();
         }
     }
-
 }
 
